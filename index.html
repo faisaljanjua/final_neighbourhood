@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+
+<body>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<span class="logo"><strong>UDACITY FEND Project</strong></span>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/faisalmjanjua/" target="_blank" class="icon fa-linkedin"><span class="label">Profile</span></a></li>
+						<li><a href="https://github.com/faisaljanjua/final_neighbourhood/" target="_blank" class="icon fa-github"><span class="label">Repo</span></a></li>
+					</ul>
+				</header>
+
+				<!-- Section -->
+				<section class="main">
+					<div id="map" style="min-height:500px;"></div>
+				</section>
+
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
+
+				<!-- Search -->
+				<section id="search" class="alt">
+					<h2>Places in Abu Dhabi</h2>
+				</section>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="list-inline category" data-bind="foreach:uniquetags">
+						<li data-bind="text:$data, click: $parent.setSelected"></li>
+					</ul>
+					<ul data-bind="foreach:filteredNames">
+						<li>
+							<span data-bind="text:name, click:$parent.currentPoint"></span>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Neighbourhood Map</h2>
+					</header>
+					<p>The neighborhood map application is complex enough and incorporates a variety of data points that it can easily become
+						unwieldy to manage. There are a number of frameworks, libraries and APIs available to make this process more manageable
+						and many employers are looking for specific skills in using these packages.</p>
+					<ul class="list-unstyled">
+						<li><a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001" target="_blank">FEND</a></li>
+					</ul>
+				</section>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">Faisal Janjua.<br/> Student Project. This Project is for UDACITY FEND.</p>
+				</footer>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="js/knockout-3.4.2.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="js/main.js"></script>
+	<script>
+		function errorHandling()
+		{
+			alert("Loading Failed : Google map api!")
+		}
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDomaj7INHPV-mNrGBCeu7xONOZ94b5GtY&libraries=places&v=3&callback=initMap" onerror="errorHandling()">
+	</script>
+	<script type="text/javascript" src="js/app.min.js"></script>
+
+</body>
+
+</html>
