@@ -90,8 +90,12 @@
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="js/main.js"></script>
 	<script type="text/javascript" src="js/app.min.js"></script>
+	<script>
+		function errorHandling() {
+			alert("Loading Failed : Google map api!");
+		}
+	</script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDomaj7INHPV-mNrGBCeu7xONOZ94b5GtY&libraries=places&v=3&callback=initMap"
 	 onerror="errorHandling()"></script>
 </body>
-
 </html>
